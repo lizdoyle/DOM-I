@@ -50,11 +50,19 @@ let midimg = document.getElementById("middle-img");
 midimg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 // Navigation
+let navItems = Object.values(siteContent.nav);
+console.log(navItems);
 
-// let navbar = document.querySelectorAll("nav");
-// navbar.forEach((navlink) => { 
-//   navlink.style.color = "green";
-//   navlink.style.fontSize = "1rem";
-  
-// } );
+let navLink = document.querySelectorAll("a");
+navLink.forEach((link, i) => { 
+  link.innerText = navItems[i];
+} );
+
+
+
+
+
+
+ // navlink.style.color = "green";
+  // navlink.style.fontSize = "16px";
 

@@ -58,24 +58,32 @@ navLink.forEach((link, i) => {
   link.innerText = navItems[i];
 } );
 
-// navLink.style.color = 'green';
-  // navlink.style.fontSize = "16px";
+// let navstyle = document.getElementById("nav<a")
+
+// navcolor.style.color = "green";
+// navLink.style.fontSize = "16px";
 
 // CTA - Hero Section Header
 
 let hero = Object.values(siteContent.cta)
 
 let heroItems = document.getElementsByClassName("cta-text");
+// figure out how to access child elements !!
+console.log(heroItems);
 
 heroCTA = Array.from(heroItems);
 heroCTA.forEach((item, i) => {
   item.innerHTML = hero[i]; 
 })
-// console.log(heroCTA);
+console.log(heroCTA);
 
-let hbtn = siteContent.cta.button;
+let hbtn = document.getElementsByTagName("button");
 
-// console.log(hbtn) - button appears in console
+
+// siteContent.cta.button
+
+console.log(hbtn) 
+// - button appears in console
 
 // main content
 
@@ -90,6 +98,9 @@ let mainItems = document.querySelectorAll("main-content");
 
 // contact
 
+// footer
+
+const foot = document.getElementsByTagName("footer");
 
 
 

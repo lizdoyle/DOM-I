@@ -51,12 +51,30 @@ midimg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 // Navigation
 let navItems = Object.values(siteContent.nav);
-console.log(navItems);
+// console.log(navItems);
 
 let navLink = document.querySelectorAll("a");
 navLink.forEach((link, i) => { 
   link.innerText = navItems[i];
 } );
+
+// CTA - Hero Section Header
+
+let hero = Object.values(siteContent.cta)
+
+let heroItems = document.getElementsByClassName("cta-text");
+
+heroCTA = Array.from(heroItems);
+heroCTA.forEach((item, i) => {
+  item.innerHTML = hero[i]; 
+})
+// console.log(heroCTA);
+
+let hbtn = siteContent.cta.button;
+
+// console.log(hbtn) - button appears in console
+
+
 
 
 

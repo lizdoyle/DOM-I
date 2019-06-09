@@ -56,33 +56,50 @@ let navItems = Object.values(siteContent.nav);
 let navLink = document.querySelectorAll("a");
 navLink.forEach((link, i) => { 
   link.innerText = navItems[i];
+  link.style.color = "green";
+  link.style.fontSize = "1.6rem";
 } );
 
-// let navstyle = document.getElementById("nav<a")
 
-// navcolor.style.color = "green";
+
 // navLink.style.fontSize = "16px";
 
 // CTA - Hero Section Header
 
-let hero = Object.values(siteContent.cta)
+// 
+let hero = Object.values(siteContent.cta);
 
 let heroItems = document.getElementsByClassName("cta-text");
+let heroButton = document.getElementsByTagName("button");
+
+hero[0] = siteContent.cta.h1;
+heroButton = siteContent.cta.button;
+
+// heroButton.style.color = 'black';
+console.log(hero[0]);
+console.log(heroButton);
+
+
 // figure out how to access child elements !!
-console.log(heroItems);
+// console.log(heroItems);
 
 heroCTA = Array.from(heroItems);
 heroCTA.forEach((item, i) => {
-  item.innerHTML = hero[i]; 
-})
-console.log(heroCTA);
+  item.innerText = hero[i]; 
+});
 
-let hbtn = document.getElementsByTagName("button");
+
+// heroCTA.appendChild('hero');
+// console.log(heroCTA);
+
+// let hbtn = document.getElementsByTagName("button");
+
+// hbtn.appendChild()
 
 
 // siteContent.cta.button
 
-console.log(hbtn) 
+// console.log(hbtn) 
 // - button appears in console
 
 // main content

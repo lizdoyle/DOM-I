@@ -80,7 +80,7 @@ console.log(hero[0]);
 console.log(heroButton);
 
 
-// figure out how to access child elements !!
+// figure out how to access child elements ??
 // console.log(heroItems);
 
 heroCTA = Array.from(heroItems);
@@ -106,18 +106,49 @@ heroCTA.forEach((item, i) => {
 
 let main = Object.values(siteContent['main-content'])
 
-let mainItems = document.querySelectorAll("main-content");
+// let mainItems = document.querySelectorAll("main-content");
 
-// heroCTA = Array.from(heroItems);
-// heroCTA.forEach((item, i) => {
-//   item.innerHTML = hero[i]; 
-// })
+// top content
+
+let topRow = document.querySelector("top-content");
+featHead = siteContent['main-content']['features-h4'];
+featPara = siteContent['main-content']['features-content'];
+abtHead = siteContent['main-content']['about-h4'];
+abtPara = siteContent['main-content']['about-content'];
+
+
+// bottom content
+let bottomRow = document.querySelector("bottom-content");
+servicesHead = siteContent['main-content']['services-h4'];
+servicesPara = siteContent['main-content']['services-content'];
+producsHead = siteContent['main-content']['product-h4'];
+productsPara = siteContent['main-content']['product-content'];
+visionHead = siteContent['main-content']['vision-h4'];
+visionPara = siteContent['main-content']['vision-content'];
 
 // contact
+let contact = document.querySelector("contact");
+conHead = siteContent['contact']['contact-h4'];
+conAddress = siteContent['contact']['address'];
+conPhone = siteContent['contact']['phone'];
+conEmail = siteContent['contact']['email'];
+
 
 // footer
 
-const foot = document.getElementsByTagName("footer");
+let foot = document.getElementsByTagName("footer p");
+
+// console.log(foot)
+
+foot.innerHTML = siteContent.footer.copyright;
+
+
+
+// document.body.appendChild(foot.innerHTML);
+
+// WHAT GOES HERE?? .appendChild(foot);
+
+
 
 
 

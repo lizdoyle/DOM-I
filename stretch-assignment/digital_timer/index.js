@@ -11,17 +11,17 @@ const secondOnesPlace =  document.querySelector('#secondOnes');
 const msHundredsPlace =  document.querySelector('#msHundreds');
 const msTensPlace =  document.querySelector('#msTens');
 
-const start =  document.querySelector('.start');
-const reset =  document.querySelector('.reset');
+const start =  document.querySelector('#start');
+const reset =  document.querySelector('#reset');
 
-let timer = 0;
+let time = 0;
 let timerInterval;
 
 const tenSec = 10000;
 
 start.addEventListener('click', () => {
-    resetDigits();
-    timerInterval = window.setInterval(updateTimer, 10)
+    zeroClock();
+    timerInterval = window.setInterval(updateTimer, 10);
 });
 
 reset.addEventListener('click', () => {
@@ -37,13 +37,29 @@ const zeroClock = () => {
     msTensPlace.textContent = 0;
 }
 
-const resetTimer()
+const resetTimer = () => {
+    clock.classList.remove("redDigit");
+    zeroClock();
+    time = 0;
+};
 
 const updateTimer = () => {
-    if{time , tenSec) {
-        msTensPlace
-    }}
+    if(time < tenSec) {
+        time += 10;
+        msTensPlace.textContent = (time / 10).toString().substr(-1);
+    if(time % 100===0) {
+        msHundredsPlace.textContent = (time / 100).toString().substr(-1);
+    if(time % 1000===0) {
+        secondOnesPlace.textContent = (time / 1000).toString().substr(-1);
+    }
+    start.disabled = true;
+    }
+    else { 
+        secondTensPlace.textContent = 1;}
+    clock.classList.add('redDigit');
+    window.clearInterval(timerInterval);
 }
+    };
 
 
 

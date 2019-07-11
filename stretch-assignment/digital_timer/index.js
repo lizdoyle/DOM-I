@@ -21,11 +21,13 @@ const tenSec = 10000;
 
 start.addEventListener('click', () => {
     zeroClock();
-    timerInterval = window.setInterval(updateTimer, 10);
+    timerInterval = setInterval(updateTimer, 10);
+    
 });
 
 reset.addEventListener('click', () => {
     start.disabled = false;
+    zeroClock();
     window.clearInterval(timerInterval);
     resetTimer();
 });
@@ -55,11 +57,14 @@ const updateTimer = () => {
     start.disabled = true;
     }
     else { 
-        secondTensPlace.textContent = 1;}
-}
-clock.classList.add('redDigit');
+        secondTensPlace.textContent = 0;}
+
+        clock.classList.add('redDigit');
 window.clearInterval(timerInterval);
+}
     };
+
+   
 
 
 

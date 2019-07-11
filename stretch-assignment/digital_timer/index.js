@@ -56,9 +56,9 @@ const updateTimer = () => {
     }
     else { 
         secondTensPlace.textContent = 1;}
-    clock.classList.add('redDigit');
-    window.clearInterval(timerInterval);
 }
+clock.classList.add('redDigit');
+window.clearInterval(timerInterval);
     };
 
 

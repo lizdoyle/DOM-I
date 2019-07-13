@@ -46,6 +46,7 @@ const resetTimer = () => {
 };
 
 const updateTimer = () => {
+    console.log('hi');
     if(time < tenSec) {
         time += 10;
         msTensPlace.textContent = (time / 10).toString().substr(-1);
@@ -56,12 +57,16 @@ const updateTimer = () => {
     }
     start.disabled = true;
     }
-    else { 
-        secondTensPlace.textContent = 0;}
-
-        clock.classList.add('redDigit');
-window.clearInterval(timerInterval);
+    
+// window.clearInterval(timerInterval);
 }
+else { 
+        secondTensPlace.textContent = 0;}
+        clock.classList.add('redDigit');
+        window.clearInterval(timerInterval);
+
+        // works without clear interval here?
+
     };
 
    

@@ -54,20 +54,20 @@ const updateTimer = () => {
         msHundredsPlace.textContent = (time / 100).toString().substr(-1);
     if(time % 1000===0) {
         secondOnesPlace.textContent = (time / 1000).toString().substr(-1);
-    }
+            }
     start.disabled = true;
-    }
+        }
     
 // window.clearInterval(timerInterval);
-}
-else { 
-        secondTensPlace.textContent = 0;}
+    }
+    else { 
+        secondTensPlace.textContent = 0;
         clock.classList.add('redDigit');
         window.clearInterval(timerInterval);
-
+    }
         // works without clear interval here?
 
-    };
+};
 
    
 
